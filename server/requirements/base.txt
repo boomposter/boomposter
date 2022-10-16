@@ -10,3 +10,6 @@ dj-rest-auth==2.2.3
 djangorestframework-simplejwt==5.0.0
 django-filter==21.1
 drf-extra-fields==3.2.1
+
+gunicorn==20.1.0
+psycopg2-binary==2.9.3

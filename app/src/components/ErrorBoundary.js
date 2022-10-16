@@ -9,10 +9,12 @@ class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
+    console.error(error)
     return { hasError: true };
   }
 
   componentDidCatch(error, info) {
+    console.info(info);
     console.error(error);
   }
 

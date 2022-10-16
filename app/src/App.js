@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Routes, Route, Navigate, HashRouter, Outlet} from "react-router-dom";
+import {Routes, Route, Navigate, HashRouter} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 import routes from "./routes";
 import {AuthProvider, useAuth} from "./hooks/AuthProvider";

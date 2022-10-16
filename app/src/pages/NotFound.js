@@ -1,10 +1,13 @@
 import {useContext} from "react";
 import {_, LanguageContext} from "../App";
+import {useNavigate} from "react-router-dom";
 
 
 const NotFound = () => {
     const {language} = useContext(LanguageContext);
     const __ = _[language];
+
+    const navigate = useNavigate();
 
     return (
         <div className="container text-center mt-5">

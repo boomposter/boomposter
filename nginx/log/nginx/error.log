@@ -1,0 +1,7 @@
+2022/10/16 20:43:09 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:56 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:56 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:57 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:57 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:57 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2022/10/16 20:44:57 [error] 22#22: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"

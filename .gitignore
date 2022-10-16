@@ -8,7 +8,7 @@ db/dumps
 
 server/.venv
 server/db.sqlite3
-./.env.dev
-./.env.prod
+.env.dev
+.env.prod
 
 app/node_modules

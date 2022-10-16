@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:14.3-alpine
+    volumes:
+      - ./db/dumps:/docker-entrypoint-initdb.d
+      - ./db/data:/var/lib/postgresql/data/
+      - ./db/postgresql.conf:/etc/postgresql.conf
+    command: [ 'postgres', '-c', 'config_file=/etc/postgresql.conf', '-c', 'log_statement=none', '-c', 'log_destination=stderr' ]
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env.prod
+  server:
+    build: ./server
+    command: gunicorn config.wsgi:application --workers=9 --timeout 40 --bind 0.0.0.0:8000
+    volumes:
+      - ./server/:/usr/src/app/
+    expose:
+      - 8000
+    env_file:
+      - ./.env.prod
+    depends_on:
+      - db
+  nginx:
+    image: "nginx:alpine"
+    command: [ 'nginx', '-g', 'daemon off;' ]
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/conf.prod:/etc/nginx/
+      - ./app/build:/var/www/
+      - ./server/apps/media:/var/www/media
+      - ./nginx/log:/var/log

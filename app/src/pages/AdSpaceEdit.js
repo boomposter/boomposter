@@ -25,7 +25,7 @@ const AdSpaceEdit = () => {
     const [images, setImages] = useState(undefined);
 
     // const [defaultLocation, setDefaultLocation] = useState(undefined);
-    const [, setLocation] = useState(undefined);
+    // const [, setLocation] = useState(undefined);
     const [zoom, setZoom] = useState(10);
 
     const fetchAdspace = async () => {

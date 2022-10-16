@@ -78,5 +78,8 @@
   "Go back": "Артқа қайту",
 
   "Page not found": "Бет табылмады",
-  "Sorry, this page was not found on the client-side": "Кешіріңіз, бұл бет табылмады"
+  "Sorry, this page was not found on the client-side": "Кешіріңіз, бұл бет табылмады",
+
+  "Register": "Тіркеу",
+  "Passwords don't match": "Құпия сөздер бірдей емес"
 }

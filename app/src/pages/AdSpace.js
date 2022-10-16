@@ -195,7 +195,7 @@ const AdSpace = () => {
                         <div className="mb-2">{__["Tags"]}:</div>
                         <div>
                             {adspace.tags.length > 0 ? (
-                                adspace.tags.map((tag) => <span className="me-4">{tag}</span>)
+                                adspace.tags.map((tag, index) => <span key={index} className="me-4">{tag}</span>)
                             ) : (
                                 <div>{__["Not tags assigned"]}</div>
                             )}

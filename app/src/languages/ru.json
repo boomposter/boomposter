@@ -78,5 +78,8 @@
   "Go back": "Назад",
 
   "Page not found": "Страница не найдена",
-  "Sorry, this page was not found on the client-side": "Извините, эта страница не была найдена"
+  "Sorry, this page was not found on the client-side": "Извините, эта страница не была найдена",
+
+  "Register": "Зарегистрироваться",
+  "Passwords don't match": "Пароли не совпадают"
 }

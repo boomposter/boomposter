@@ -43,13 +43,13 @@ export default function AdSpaceCreate() {
             setDefaultLocation(currentLocation);
             // setLocation(currentLocation);
         } catch (error) {
-            if (error instanceof GeolocationPositionError) {
+            // if (error instanceof GeolocationPositionError) {
                 setDefaultLocation(DEFAULT_LOCATION);
-                // setLocation(DEFAULT_LOCATION);
-                return;
-            }
+                setLocation(DEFAULT_LOCATION);
+                // return;
+            // }
             console.error(error);
-            toast.error(error);
+            // toast.error(error);
         }
     };
 

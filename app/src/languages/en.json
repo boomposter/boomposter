@@ -78,5 +78,8 @@
   "Go back": "Go back",
 
   "Page not found": "Page not found",
-  "Sorry, this page was not found on the client-side": "Sorry, this page was not found on the client-side"
+  "Sorry, this page was not found on the client-side": "Sorry, this page was not found on the client-side",
+
+  "Register": "Register",
+  "Passwords don't match": "Passwords don't match"
 }

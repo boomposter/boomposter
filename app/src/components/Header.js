@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useAuth} from "../hooks/AuthProvider";
 import routes from "../routes";
 // import logo from "../assets/logo.svg";
@@ -35,6 +35,8 @@ const Header = () => {
 
     const {language} = useContext(LanguageContext);
     const __ = _[language];
+
+    const navigate = useNavigate();
 
     return (
         <div className="d-flex justify-content-between align-items-center bg-light py-2 px-3 mb-3">

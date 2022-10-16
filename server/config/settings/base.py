@@ -1,23 +1,19 @@
 """
 Base settings to build other settings files upon.
 """
+import os
 from datetime import timedelta
 from pathlib import Path
 
-import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = ROOT_DIR / "apps"
-env = environ.Env()
 
-DEBUG = env.bool("DJANGO_DEBUG", True)
-
-if DEBUG:
-    env.read_env(str(ROOT_DIR / ".env.dev"))
+DEBUG = bool(int(os.environ.get("DEBUG", default=1)))
 
 # GENERAL
 # ------------------------------------------------------------------------------
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # Local time zone. Choices are
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
@@ -34,19 +30,6 @@ USE_I18N = False
 USE_L10N = False
 USE_TZ = True
 
-# DATABASES
-# ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": str(ROOT_DIR / "db.sqlite3"),
-        # "ATOMIC_REQUESTS": True,
-        "OPTIONS": {
-            "timeout": 20,  # seconds
-        },
-    }
-}
 # DATABASES["default"]["TIME_ZONE"] = TIME_ZONE
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -111,12 +94,12 @@ PASSWORD_HASHERS = [
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
-    },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+    # {
+    #     "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+    # },
+    # {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    # {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    # {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 # MIDDLEWARE
@@ -205,10 +188,7 @@ X_FRAME_OPTIONS = "DENY"
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-EMAIL_BACKEND = env(
-    "DJANGO_EMAIL_BACKEND",
-    default="django.core.mail.backends.smtp.EmailBackend",
-)
+EMAIL_BACKEND = os.environ.get("DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
 
@@ -296,7 +276,7 @@ SIMPLE_JWT = {
 }
 
 # django-allauth
-ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
+ACCOUNT_ALLOW_REGISTRATION = os.environ.get("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
 ACCOUNT_AUTHENTICATION_METHOD = "email"  # login method
 ACCOUNT_USERNAME_REQUIRED = True
@@ -321,7 +301,3 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 # django-taggit
 TAGGIT_CASE_INSENSITIVE = True
 
-# django-cors-headers
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
-# CORS_ALLOW_ALL_ORIGINS = True
-CORS_URLS_REGEX = r"^/api/.*$"

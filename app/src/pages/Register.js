@@ -113,11 +113,11 @@ const Register = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           {checkPasswordsDontMatch() && (
-            <div className="invalid-feedback">Passwords don't match</div>
+            <div className="invalid-feedback">{__["Passwords don't match"]}</div>
           )}
         </div>
         <button className="btn btn-primary" type="submit">
-          Register
+          {__["Register"]}
         </button>
       </form>
     </div>
