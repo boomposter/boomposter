@@ -1,0 +1,34 @@
+@import "./base";
+
+.adspace-card:hover {
+  background-color: $gray-100;
+}
+
+.filter-panel {
+
+  .filter-panel_fiter-block {
+    background: #6f42c1;
+    border-color: #6f42c1;
+    border-radius: 20px;
+    text-align: center;
+
+    .filter-block__text {
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter-panel {
+    .filter-panel_fiter-block {
+      img {
+        width: 70px;
+      }
+      .filter-block__text {
+        display: inline-block;
+        margin-left: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.idea
+.vscode
+.DS_Store
+__pycache__
+
+server/.venv
+server/db.sqlite3
+server/.env.dev.example
+
+app/node_modules
