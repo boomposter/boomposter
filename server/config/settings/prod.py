@@ -1,7 +1,7 @@
 from .base import *  # noqa
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["boomposter.com", "localhost"]
+ALLOWED_HOSTS = ["boomposter.com", "localhost", "0.0.0.0"]
 
 # DATABASES
 # ------------------------------------------------------------------------------

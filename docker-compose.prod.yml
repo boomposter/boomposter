@@ -14,7 +14,7 @@ services:
       - ./.env.prod
   server:
     build: ./server
-    command: gunicorn config.wsgi:application --workers=9 --timeout 40 --bind 0.0.0.0:8000
+    command: gunicorn config.wsgi:application --workers=3 --timeout 40 --bind 0.0.0.0:8000
     volumes:
       - ./server/:/usr/src/app/
     expose:
