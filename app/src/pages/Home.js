@@ -37,32 +37,38 @@ const Home = () => {
             <div className="row mt-5 gy-4 filter-panel">
                 <div className="col-12 col-md-4">
                     <div
-                        className="py-4 filter-panel_fiter-block"
+                        className="d-flex justify-content-center align-items-center flex-md-column py-4 filter-panel_fiter-block"
                         role="button"
                         onClick={() => navigate("/adspaces/billboard/")}
                     >
-                        <img src="/img/billboard.svg" alt=""/>
-                        <div className="filter-block__text">Billboard</div>
+                        <div className="d-flex">
+                            <img src="/img/billboard.svg" alt=""/>
+                        </div>
+                        <div className="d-flex filter-block__text">Billboard</div>
                     </div>
                 </div>
                 <div className="col-12 col-md-4">
                     <div
-                        className="py-4 filter-panel_fiter-block"
+                        className="d-flex justify-content-center align-items-center flex-md-column py-4 filter-panel_fiter-block"
                         role="button"
                         onClick={() => navigate("/adspaces/digital/")}
                     >
-                        <img src="/img/digital.svg" alt=""/>
-                        <div className="filter-block__text">Digital</div>
+                        <div className="d-flex">
+                            <img src="/img/digital.svg" alt=""/>
+                        </div>
+                        <div className="d-flex filter-block__text">Digital</div>
                     </div>
                 </div>
                 <div className="col-12 col-md-4">
                     <div
-                        className="py-4 filter-panel_fiter-block"
+                        className="d-flex justify-content-center align-items-center flex-md-column py-custom-img filter-panel_fiter-block"
                         role="button"
                         onClick={() => navigate("/adspaces/transport/")}
                     >
-                        <img src="/img/transit.svg" alt="" width={"115"} height={"111"}/>
-                        <div className="filter-block__text">Transport</div>
+                        <div className="d-flex">
+                            <img src="/img/transit.svg" alt=""/>
+                        </div>
+                        <div className="d-flex filter-block__text">Transport</div>
                     </div>
                 </div>
             </div>

@@ -42,14 +42,14 @@ const Header = () => {
         <div className="d-flex justify-content-between align-items-center bg-light py-2 px-3 mb-3">
             <div className="d-flex gap-2 align-items-center">
                 <Link
-                    className="text-dark fs-3 text-decoration-none"
+                    className="d-none d-sm-block text-dark fs-3 text-decoration-none"
                     style={{fontWeight: 600}}
                     to={routes.home}
                 >
                 <img src="/img/logo.svg" alt="logo" height={32}/>
                 </Link>
             </div>
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center align-self-end">
                 <div className="d-flex">
                     <LanguageSelector/>
                 </div>

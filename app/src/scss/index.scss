@@ -4,6 +4,12 @@
   background-color: $gray-100;
 }
 
+// Given third image is larger than other so I created custom class for alignment button
+.py-custom-img {
+  padding-top: 1.9rem !important;
+  padding-bottom: 1.9rem !important;
+}
+
 .filter-panel {
 
   .filter-panel_fiter-block {
@@ -20,6 +26,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  .py-custom-img {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
   .filter-panel {
     .filter-panel_fiter-block {
       img {
