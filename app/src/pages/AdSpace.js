@@ -168,7 +168,13 @@ const AdSpace = () => {
                     </div>
                     {adspace.images.length > 0 && (
                         <ImageGallery
-                            items={adspace.images.map((image) => ({original: image.image}))}
+                            items={adspace.images.map((image) => {
+                                let img_url = image.image;
+                                if(img_url.indexOf("http://boomposter.com")) {
+                                    img_url.replace("http://boomposter.com", "")
+                                }
+                                return {original: img_url}
+                            })}
                             infinite={false}
                         />
                     )}

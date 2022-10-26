@@ -29,7 +29,7 @@ export function removeRefreshToken() {
 
 // Urls
 //
-const API_BASE_URL = "/api/";
+const API_BASE_URL = "http://localhost:8000/api/";
 
 const urls = {
   // Authentication, registration, account management
