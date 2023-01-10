@@ -86,11 +86,12 @@ const AdSpace = () => {
 
     return (
         <>
-            <div className="container d-flex flex-md-row flex-column">
+            <div id="wrap" className="container d-flex flex-md-row flex-column">
                 <div style={{width: 500}}>
                     <div>
                         <h1>{adspace.title}</h1>
-                        <div className="d-flex justify-content-between align-items-center">
+                        {auth.user?.id === adspace.user?.id && (
+                            <div className="d-flex justify-content-between align-items-center">
                             <div>
                                 <div
                                     className="profile d-flex align-items-center dropdown-toggle"
@@ -125,29 +126,29 @@ const AdSpace = () => {
                                         </button>
                                     </div>
                                     {/* <li>
-                    <h6 className="dropdown-header">Account</h6>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={routes.profile}>
-                      Profile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to={routes.adspaces}>
-                      My AdSpaces
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={() => auth.logout()}
-                    >
-                      Logout
-                    </button>
-                  </li> */}
+                                            <h6 className="dropdown-header">Account</h6>
+                                        </li>
+                                        <li>
+                                            <Link className="dropdown-item" to={routes.profile}>
+                                            Profile
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className="dropdown-item" to={routes.adspaces}>
+                                            My AdSpaces
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <hr className="dropdown-divider" />
+                                        </li>
+                                        <li>
+                                            <button
+                                            className="dropdown-item"
+                                            onClick={() => auth.logout()}
+                                            >
+                                            Logout
+                                            </button>
+                                        </li> */}
                                 </ul>
                             </div>
 
@@ -164,7 +165,9 @@ const AdSpace = () => {
                                     </button>
                                 </div>
                             )}
-                        </div>
+                        </div>    
+                        )}
+                        
                     </div>
                     {adspace.images.length > 0 && (
                         <ImageGallery

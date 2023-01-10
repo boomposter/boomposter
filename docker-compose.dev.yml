@@ -18,3 +18,11 @@ services:
     volumes:
       - ./app:/usr/src/app
       - /usr/src/app/node_modules
+  frontend:
+    build: ./boomposter
+    command: npm start
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./boomposter:/usr/src/app
+      - /usr/src/app/node_modules

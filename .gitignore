@@ -11,5 +11,7 @@ server/db.sqlite3
 server/apps/media/*
 .env.dev
 .env.prod
+.commands
 
 app/node_modules
+boomposter/node_modules

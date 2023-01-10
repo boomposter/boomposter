@@ -31,7 +31,7 @@ class AdSpaceViewSet(ModelViewSet):
     ordering_fields = ["id", "created"]
 
     tags_map = {
-        "billboard": ['billboard', 'билбоард'],
+        "billboard": ['billboard', 'билборд'],
         "digital": ['digital', 'диджитал'],
         "transport": ['transport', 'транспорт'],
     }

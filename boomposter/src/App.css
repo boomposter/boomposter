@@ -1,0 +1,350 @@
+body {
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+ }
+
+.loginb {
+  padding: 8px 10px;
+  border: 1px solid #6C43C6;
+  border-radius: 6px;
+  color: #6C43C6;
+  background-color: white;
+  font-size: 12px;
+  cursor: pointer;
+ }
+
+.button {
+  padding: 8px 10px;
+  background: #6C43C6;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0;
+}
+
+.save-button {
+  padding: 8px 10px;
+  background: #6C43C6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  border: 0;
+}
+
+.banner {
+  background-image: url("../public/img/rectangle.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  margin-bottom: 39px;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-weight: 800;
+  font-size: 32px;
+  color:#fff;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+  gap:14px;
+}
+
+.tag {
+  display: inline-block;
+  color:#282828;
+  font-size: 12px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  padding: 5px 8px;
+  background-color: #fff;
+  margin:5px;
+  }
+
+.tag img {
+   vertical-align: middle;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 0px;
+}
+
+
+
+.details-like {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.center-center {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+.notfound {
+  padding: 80px;
+  text-align: center;
+}
+.notfound p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #282828;
+  margin:34px;
+}
+
+
+.details-page h1 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.details-page h2 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+  margin:0;
+}
+
+
+
+.left {
+  width:100%;
+}
+
+.right {
+  width: 100%;
+}
+
+.right p {
+  font-size: 16px;
+}
+
+
+.details {  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+}
+
+.details-left-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #8A8A8A;
+  margin: 14px 0;
+}
+
+.meters {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #8A8A8A;
+}
+
+.details-right-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #282828;
+  margin: 14px 0;
+}
+
+
+.ad-author-details > div {
+  margin:7px 0;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #282828;
+}
+
+
+
+.details-location {
+  margin: 0 0 26px 0;
+}
+
+.filters-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #282828;
+  margin: 0 0 12px 0;
+}
+
+.filter-block {
+  margin:30px 0;
+}
+
+
+.main {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hide the default checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox
+based on demand */
+.geekmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #CDCDCD;
+}
+
+/* Specify the background color to be
+shown when hovering over checkbox */
+.main:hover input ~ .geekmark {
+  border: 1px solid  #6C43C6;
+}
+
+/* Specify the background color to be
+shown when checkbox is active */
+.main input:active ~ .geekmark {
+  border: 1px solid  #6C43C6;
+}
+
+/* Specify the background color to be
+shown when checkbox is checked */
+.main input:checked ~ .geekmark {
+  border: 1px solid  #6C43C6;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked ~ .geekmark:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .geekmark:after {
+  left: 5px;
+  bottom: 6px;
+  width: 6px;
+  height: 6px;
+  border: solid #6C43C6;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.filter-inputs > input {
+  align-items: center;
+  gap: 8px;
+  width: 64px;
+  height: 32px;
+  border: 1px solid #D9D9D9;
+  border-radius: 6px;
+  text-align: center;
+  margin:8px;
+}
+.filter-inputs > input::placeholder {
+  color: #D9D9D9;
+
+}
+.filter-inputs {
+  margin-bottom: 12px;
+}
+
+
+
+
+form.nosubmit {
+  border: none;
+  padding: 0;
+}
+
+input.nosubmit {
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  display: block;
+  padding: 12px 4px 12px 12px;
+  background: transparent url("../public/img/search.svg") no-repeat 420px center;
+  font-weight: 500;
+  font-size: 16px;
+  color: #282828;
+}
+
+.input.nosubmit:focus {
+  border-color: #6C43C6;
+}
+
+.filtres-title {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6C43C6;
+  padding: 11px 0;
+  border-bottom: 1px solid #D9D9D9;
+}

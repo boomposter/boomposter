@@ -53,6 +53,16 @@ const Header = () => {
                 <div className="d-flex">
                     <LanguageSelector/>
                 </div>
+                <div>
+                    <div
+                        className="profile d-flex align-items-center dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                    >
+                        <FontAwesomeIcon icon="fa-light fa-globe"/>
+                    </div>
+                    <ul className="dropdown-menu dropdown-menu-end"></ul>
+                </div>
                 {auth.user === null ? (
                     <div className="d-flex gap-2">
                         <Link className="btn btn-outline-primary" to={routes.login}>

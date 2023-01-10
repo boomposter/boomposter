@@ -1,0 +1,16 @@
+#root {
+    position: relative;
+    min-height: 100vh;
+}
+
+#wrap {
+    padding-bottom: 2.8rem; 
+}
+
+#footer {
+    padding-top: 7px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}

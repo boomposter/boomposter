@@ -104,7 +104,7 @@ export default function AdSpaceCreate() {
     };
 
     return (
-        <div className="container">
+        <div id="wrap" className="container">
             <h2 className="mb-3 mt-5">{__["Post advertisement space"]}</h2>
 
             <form

@@ -32,7 +32,7 @@ export default function AdSpaces(props) {
     }
 
     return (
-        <div className="container mt-5">
+        <div id="wrap" className="container mt-5">
             <h2 className="mb-4">{__["Posted Advertisement spaces"]}</h2>
             {auth.user &&
                 <Link className="btn btn-primary mb-4" to={routes.adspaceCreate}>
